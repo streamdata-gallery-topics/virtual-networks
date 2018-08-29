@@ -8,8 +8,8 @@ image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/l
 x-kinRank: "10"
 x-alexaRank: "0"
 tags: Virtual Networks
-created: "2018-08-26"
-modified: "2018-08-26"
+created: "2018-08-28"
+modified: "2018-08-28"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/virtual-networks/master/_listings/azure-devtest-labs/apis.md
 specificationVersion: "0.14"
 apis:
@@ -39,6 +39,18 @@ apis:
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/virtual-networks/master/_listings/azure-devtest-labs/subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-devtestlablabslabnamevirtualnetworksname-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/virtual-networks/master/_listings/azure-devtest-labs/subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-devtestlablabslabnamevirtualnetworksname-get-openapi.md
+- name: DevTestLabsClient - Virtual Networks Create Or Update
+  x-api-slug: subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-devtestlablabslabnamevirtualnetworksname-put
+  description: Create or replace an existing virtual network. This operation can take
+    a while to complete.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/azure-devtest-integrate.png
+  humanURL: https://azure.microsoft.com/en-us/services/devtest-lab/
+  baseURL: ://management.azure.com//
+  tags: Testing, Microsoft, Orchestration, Stack Network, API Service Provider, API
+    Provider, Profiles, Relative Data, Service API
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/virtual-networks/master/_listings/azure-devtest-labs/subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-devtestlablabslabnamevirtualnetworksname-put-openapi.md
 - name: DevTestLabsClient - Virtual Networks Delete
   x-api-slug: subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-devtestlablabslabnamevirtualnetworksname-delete
   description: Delete virtual network. This operation can take a while to complete.
@@ -52,6 +64,17 @@ apis:
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/virtual-networks/master/_listings/azure-devtest-labs/subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-devtestlablabslabnamevirtualnetworksname-delete-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/virtual-networks/master/_listings/azure-devtest-labs/subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-devtestlablabslabnamevirtualnetworksname-delete-openapi.md
+- name: DevTestLabsClient - Virtual Networks Update
+  x-api-slug: subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-devtestlablabslabnamevirtualnetworksname-patch
+  description: Modify properties of virtual networks.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/azure-devtest-integrate.png
+  humanURL: https://azure.microsoft.com/en-us/services/devtest-lab/
+  baseURL: ://management.azure.com//
+  tags: Testing, Microsoft, Orchestration, Stack Network, API Service Provider, API
+    Provider, Profiles, Relative Data, Service API
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/virtual-networks/master/_listings/azure-devtest-labs/subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-devtestlablabslabnamevirtualnetworksname-patch-openapi.md
 x-common:
 - type: x-api-gallery
   url: http://azure.data.lake.store.api.gallery.streamdata.io

@@ -3,8 +3,8 @@ swagger: "2.0"
 x-collection-name: Azure Virtual Network
 x-complete: 0
 info:
-  title: Azure Virtual Network API Virtual Networks Check IPAddress Availability
-  description: Checks whether a private IP address is available for use.
+  title: Azure Virtual Network API Virtual Network Peerings Create Or Update
+  description: Creates or updates a peering in the specified virtual network.
   version: 1.0.0
 host: management.azure.com
 basePath: /
@@ -136,6 +136,99 @@ paths:
           description: OK
       tags:
       - Virtual Networks
+  ? /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/virtualNetworkPeerings/{virtualNetworkPeeringName}
+  : delete:
+      summary: Virtual Network Peerings Delete
+      description: Deletes the specified virtual network peering.
+      operationId: VirtualNetworkPeerings_Delete
+      x-api-path-slug: subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-networkvirtualnetworksvirtualnetworknamevirtualnetworkpeeringsvirtualnetworkpeeringname-delete
+      parameters:
+      - in: query
+        name: No Name
+      - in: path
+        name: resourceGroupName
+        description: The name of the resource group
+      - in: path
+        name: virtualNetworkName
+        description: The name of the virtual network
+      - in: path
+        name: virtualNetworkPeeringName
+        description: The name of the virtual network peering
+      responses:
+        200:
+          description: OK
+      tags:
+      - Virtual Network Peerings
+    get:
+      summary: Virtual Network Peerings Get
+      description: Gets the specified virtual network peering.
+      operationId: VirtualNetworkPeerings_Get
+      x-api-path-slug: subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-networkvirtualnetworksvirtualnetworknamevirtualnetworkpeeringsvirtualnetworkpeeringname-get
+      parameters:
+      - in: query
+        name: No Name
+      - in: path
+        name: resourceGroupName
+        description: The name of the resource group
+      - in: path
+        name: virtualNetworkName
+        description: The name of the virtual network
+      - in: path
+        name: virtualNetworkPeeringName
+        description: The name of the virtual network peering
+      responses:
+        200:
+          description: OK
+      tags:
+      - Virtual Network Peerings
+    put:
+      summary: Virtual Network Peerings Create Or Update
+      description: Creates or updates a peering in the specified virtual network.
+      operationId: VirtualNetworkPeerings_CreateOrUpdate
+      x-api-path-slug: subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-networkvirtualnetworksvirtualnetworknamevirtualnetworkpeeringsvirtualnetworkpeeringname-put
+      parameters:
+      - in: query
+        name: No Name
+      - in: path
+        name: resourceGroupName
+        description: The name of the resource group
+      - in: path
+        name: virtualNetworkName
+        description: The name of the virtual network
+      - in: path
+        name: virtualNetworkPeeringName
+        description: The name of the peering
+      - in: body
+        name: VirtualNetworkPeeringParameters
+        description: Parameters supplied to the create or update virtual network peering
+          operation
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Virtual Network Peerings
+  ? /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/virtualNetworkPeerings
+  : get:
+      summary: Virtual Network Peerings List
+      description: Gets all virtual network peerings in a virtual network.
+      operationId: VirtualNetworkPeerings_List
+      x-api-path-slug: subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-networkvirtualnetworksvirtualnetworknamevirtualnetworkpeerings-get
+      parameters:
+      - in: query
+        name: No Name
+      - in: path
+        name: resourceGroupName
+        description: The name of the resource group
+      - in: path
+        name: virtualNetworkName
+        description: The name of the virtual network
+      responses:
+        200:
+          description: OK
+      tags:
+      - Virtual Network Peerings
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

@@ -3,8 +3,9 @@ swagger: "2.0"
 x-collection-name: Azure DevTest Labs
 x-complete: 0
 info:
-  title: Azure DevTest Labs API Virtual Networks Delete
-  description: Delete virtual network. This operation can take a while to complete.
+  title: Azure DevTest Labs API Virtual Networks Create Or Update
+  description: Create or replace an existing virtual network. This operation can take
+    a while to complete.
   version: 1.0.0
 host: management.azure.com
 basePath: /
@@ -87,25 +88,6 @@ paths:
         description: A virtual network
         schema:
           $ref: '#/definitions/holder'
-      responses:
-        200:
-          description: OK
-      tags:
-      - Virtual Networks
-    delete:
-      summary: Virtual Networks Delete
-      description: Delete virtual network. This operation can take a while to complete.
-      operationId: VirtualNetworks_Delete
-      x-api-path-slug: subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-devtestlablabslabnamevirtualnetworksname-delete
-      parameters:
-      - in: path
-        name: labName
-        description: The name of the lab
-      - in: path
-        name: name
-        description: The name of the virtual network
-      - in: query
-        name: No Name
       responses:
         200:
           description: OK

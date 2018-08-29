@@ -3,8 +3,8 @@ swagger: "2.0"
 x-collection-name: Azure Virtual Network
 x-complete: 0
 info:
-  title: Azure Virtual Network API Virtual Networks Check IPAddress Availability
-  description: Checks whether a private IP address is available for use.
+  title: Azure Virtual Network API Virtual Networks Create Or Update
+  description: Creates or updates a virtual network in the specified resource group.
   version: 1.0.0
 host: management.azure.com
 basePath: /
@@ -71,60 +71,6 @@ paths:
         description: Parameters supplied to the create or update virtual network operation
         schema:
           $ref: '#/definitions/holder'
-      - in: path
-        name: resourceGroupName
-        description: The name of the resource group
-      - in: path
-        name: virtualNetworkName
-        description: The name of the virtual network
-      responses:
-        200:
-          description: OK
-      tags:
-      - Virtual Networks
-  /subscriptions/{subscriptionId}/providers/Microsoft.Network/virtualNetworks:
-    get:
-      summary: Virtual Networks List All
-      description: Gets all virtual networks in a subscription.
-      operationId: VirtualNetworks_ListAll
-      x-api-path-slug: subscriptionssubscriptionidprovidersmicrosoft-networkvirtualnetworks-get
-      parameters:
-      - in: query
-        name: No Name
-      responses:
-        200:
-          description: OK
-      tags:
-      - Virtual Networks
-  /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks:
-    get:
-      summary: Virtual Networks List
-      description: Gets all virtual networks in a resource group.
-      operationId: VirtualNetworks_List
-      x-api-path-slug: subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-networkvirtualnetworks-get
-      parameters:
-      - in: query
-        name: No Name
-      - in: path
-        name: resourceGroupName
-        description: The name of the resource group
-      responses:
-        200:
-          description: OK
-      tags:
-      - Virtual Networks
-  ? /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/CheckIPAddressAvailability
-  : get:
-      summary: Virtual Networks Check IPAddress Availability
-      description: Checks whether a private IP address is available for use.
-      operationId: VirtualNetworks_CheckIPAddressAvailability
-      x-api-path-slug: subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-networkvirtualnetworksvirtualnetworknamecheckipaddressavailability-get
-      parameters:
-      - in: query
-        name: ipAddress
-        description: The private IP address to be verified
-      - in: query
-        name: No Name
       - in: path
         name: resourceGroupName
         description: The name of the resource group
